@@ -1,0 +1,21 @@
+<h1>Liste des Corsairs</h1>
+
+<td><%= link_to 'Espace de rédaction', new_corsair_path %></td>
+
+<br/>
+
+
+<table>
+  <tr>
+    <th>Prénom</th>
+    <th>Age</th>
+  </tr>
+ 
+  <% @corsairs.each do |corsair| %>
+    <tr>
+      <td><%= corsair.first_name %></td>
+      <td><%= corsair.age %></td>
+      <td><%= link_to 'Show', corsair_path(corsair) %></td>
+    </tr>
+  <% end %>
+</table>
